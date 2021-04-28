@@ -1,3 +1,4 @@
+import random
 while True:
 
 
@@ -6,20 +7,21 @@ while True:
     i = 1
     a = 1
     b = 1
+    d = random.randint(1, 20)
     if case == "구구단":
 
             for a in range(1 , 10):
                 print ("[ " + str (a) + '단 ]')
-                for b in range(1, 10):
+                for b in range(1, d):
                     print(str(a) + "x" + str(b) + " = " + str(a * b))
-                    if (b == 9):
+                    if (b == d):
                         b = 1
                         break
     else:
         if case.isnumeric():
 
             print("[ " + str(case) + '단 ]')
-            for i in range(1, 10):
+            for i in range(1, d):
                 print(str(case) + "x" + str(i) + " = " + str(int (i) * int(case)))
                 i += 1
 
